@@ -30,6 +30,12 @@ html, body{
 
     /* border radius */
     --border-radius-xs:0.25px;
+    --border-radius-sm: 0.5rem;
+    --border-radius-md: 1rem;
+    --border-radius-lg: 1.25rem;
+    --border-radius-xl: 2rem;
+    --border-radius-2xl: 2.25rem;
+    --border-radius-3xl: 3rem;
 }
 
 html{
@@ -44,6 +50,10 @@ main, section {
 }
 section {
     padding: var(--space-2xl);
+    display:flex;
+    flex-direction: column;
+    height: 100%;
+    gap: var(--space-lg);
 }
 section .infos {
     width : 100%;
@@ -54,6 +64,12 @@ section .infos {
 
 .info {
     padding: var(--space-sm) var(--space-md);
-    border: var(--border-primary-color) ;
-
+    border: 1px solid var( --border-primary-color);
+    border-radius: var(--border-radius-sm);
 }
+
+.board {
+    border: 1px solid var(--border-primary-color );
+    flex-grow: 1;  
+}
+
