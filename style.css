@@ -1,0 +1,59 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+}
+
+:root {
+    /* background color */
+    --bg-primary-color: rgb(40, 39, 39);
+    
+    /* text color */
+    --text-primary-color:rgb(249, 234, 234);
+
+    /* spacing var 1rem = 16px */
+    --space-xs:0.25rem;
+    --space-sm:0.5rem;
+    --space-md: 1rem;
+    --space-lg: 1.25rem;
+    --space-xl: 2rem;
+    --space-2xl: 2.25rem;
+    --space-3xl: 3rem;
+
+    /* border colors */
+    --border-primary-color: #333333;
+
+    /* border radius */
+    --border-radius-xs:0.25px;
+}
+
+html{
+    background-color: var(--bg-primary-color);
+    color:var(--text-primary-color);
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+main, section {
+    width: 100%;
+    height: 100%;
+}
+section {
+    padding: var(--space-2xl);
+}
+section .infos {
+    width : 100%;
+    display:flex;
+    justify-content:space-around;
+    
+}
+
+.info {
+    padding: var(--space-sm) var(--space-md);
+    border: var(--border-primary-color) ;
+
+}
