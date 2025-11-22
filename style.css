@@ -12,6 +12,7 @@ html, body{
 :root {
     /* background color */
     --bg-primary-color: rgb(40, 39, 39);
+    --bg-fill-color:rgb(232, 123, 141);
     
     /* text color */
     --text-primary-color:rgb(249, 234, 234);
@@ -73,12 +74,16 @@ section .infos {
     flex-grow: 1;  
     display: grid;
     /* minmax = evenly distributes the last space */
-    grid-template-columns: repeat(auto-fill, minmax(30px, 1fr));  
-    grid-template-rows: repeat(auto-fill, minmax(30px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(50px, 2fr));  
+    grid-template-rows: repeat(auto-fill, minmax(50px, 2fr));
 }
 
 .block {
-    width: 30px;
-    height: 30px;
+    width: 50px;
+    height: 50px;
     border: 1px solid var(--border-primary-color);    
+}
+
+.fill {
+    background-color: var(--bg-fill-color);
 }
