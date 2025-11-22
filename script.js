@@ -11,3 +11,4 @@ for(let i =0; i<rows*cols; i++){
     board.appendChild(block);
 }
 
+
