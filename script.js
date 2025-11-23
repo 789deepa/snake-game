@@ -14,7 +14,7 @@ const blockWidth = 50
 
 let highScore = localStorage.getItem("highScore") || 0;
 let score = 0
-let time = `00-00`
+let time = `00:00`
 
 highScoreElement.innerHTML = highScore
 
@@ -114,7 +114,7 @@ startButton.addEventListener("click", ()=>{
     //timer logic 
     timerIntervalId = setInterval(()=>{ 
         //destructuring 
-        let [min, sec] = time.split("-").map(Number)
+        let [min, sec] = time.split(":").map(Number)
 
         if(sec == 59){
             min+=1
@@ -123,7 +123,7 @@ startButton.addEventListener("click", ()=>{
             sec+=1
         }
 
-        time = `${min}-${sec}`
+        time = `${String(min).padStart(2, "0")}:${String(sec).padStart(2, "0")}`;
         timeElement.innerHTML = time
     }, 1000)
 })
@@ -139,7 +139,7 @@ function restartGame() {
     })
 
     score = 0;
-    time = `00-00`;
+    time = `00:00`;
 
     scoreElement.innerHTML = score;
     timeElement.innerHTML = time;
